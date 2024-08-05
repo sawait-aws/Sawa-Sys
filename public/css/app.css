@@ -1,0 +1,374 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #ffffff;
+    padding-top: 60px; 
+    transition: 0.3s;
+    overflow-x: hidden;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+}
+
+.sidebar i {
+    margin-right: 10px;
+    color: #b0b0b0;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #007BFF;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; 
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: margin-left 0.3s; 
+    z-index: 1001;
+}
+
+.topnav .logo {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.main {
+    margin-left: 0;
+    padding: 20px;
+    transition: margin-left 0.3s;
+    margin-top: 60px;
+    background-color: #f1f1f1;
+}
+
+.table-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow-x: auto; /* Allow horizontal scrolling for wide tables */
+    overflow-y: auto; /* Allow vertical scrolling for tall tables */
+    white-space: nowrap; /* Prevent text wrapping inside the table */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Adjust column widths automatically */
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap; /* Prevent text wrapping for better readability */
+}
+
+table td{
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+table th {
+    background-color: #f1f1f1;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap; /* Allow filters to wrap to the next line */
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px; /* Add gap between filters */
+}
+
+.filter-form .form-group {
+    flex: 1 1 auto; /* Allow form groups to grow and shrink as needed */
+    min-width: 200px; /* Set a minimum width to avoid overly small inputs */
+    display: flex;
+    align-items: center;
+}
+
+.filter-form select{
+    width:auto;
+}
+
+.filter-form input[type="date"]{
+    width: 150px;
+}
+
+.filter-form input[type="date"],
+.filter-form input[type="number"]{
+    min-width: 150px;
+}
+
+.filter-form select,
+.filter-form input[type="text"],
+.filter-form input[type="date"],
+.filter-form input[type="number"],
+.filter-form input[type="email"] {
+    flex: 1 1 auto; /* Allow inputs to grow and shrink as needed */
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding doesn't affect total width/height */
+    font-size: 14px; /* Adjust font size if necessary */
+}
+
+.filter-form .btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.filter-form .btn-primary {
+    background-color: #007BFF;
+    color: white;
+}
+
+.filter-form .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.filter-form .btn-danger {
+    background-color: #f70000;
+    color: white;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form input,
+.form-container form select,
+.form-container form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container form button:hover {
+    background-color: #0056b3;
+}
+
+.notification {
+    margin: 20px;
+    padding: 15px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    border-radius: 4px;
+    display: none; /* Hidden by default */
+}
+
+/* Style for delete button */
+.delete-btn {
+    color: red;
+    margin-left: 10px; /* Add spacing between delete and edit buttons */
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.delete-btn:hover {
+    color: darkred; /* Darker red on hover */
+}
+
+/* Style for edit button */
+.edit-btn {
+    color: blue;
+    margin-right: 10px; /* Add spacing between edit and delete buttons */
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.edit-btn:hover {
+    color: darkblue; /* Darker blue on hover */
+}
+
+
+/* Statistics Container */
+.statistics-container {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    gap: 10px; /* Add space between the boxes */
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+/* Stat Box */
+.stat-box {
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    min-width: 120px; /* Set a minimum width for the boxes */
+}
+
+/* Blue Stat Box */
+.stat-box-blue {
+    background-color: #007bff;
+}
+
+/* Green Stat Box */
+.stat-box-green {
+    background-color: #28a745;
+}
+
+/* Stat Number */
+.stat-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Stat Label */
+.stat-label {
+    font-size: 16px;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination li a,
+.pagination li span {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #007bff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination li a:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination li span.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination li.disabled span,
+.pagination li.disabled a {
+    color: #ddd;
+    pointer-events: none;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px; /* Ensure some spacing between buttons */
+}
+
+.btn-download:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto; /* Center align the alert */
+    text-align: center; /* Center the text */
+    box-sizing: border-box;
+    opacity: 1; /* Fully visible */
+    transition: opacity 1s ease-out; /* Smooth transition for opacity */
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-fade-out {
+    opacity: 0; /* Fully transparent */
+}
