@@ -12,6 +12,7 @@ class MarketingMonthlyContractsController extends Controller
         ['name' => 'Swaida', 'url' => 'swaidaPage', 'icon' => 'fas fa-table'],
         ['name' => 'Marketing Earnings', 'url' => 'marketingEarnings', 'icon' => 'fas fa-table'],
         ['name' => 'Marketing Monthly Contracts', 'url' => 'marketingMonthlyContractsPage', 'icon' => 'fas fa-table'],
+        ['name' => 'Daily Sales', 'url' => 'dailySalesPage', 'icon' => 'fas fa-table'],
     ];
 
     public function index()
