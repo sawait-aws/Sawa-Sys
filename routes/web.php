@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SwaidaController;
 use App\Http\Controllers\MarketingMonthlyEarningsController;
 use App\Http\Controllers\MarketingMonthlyContractsController;
+use App\Http\Controllers\DailySalesController;
 
 //Swaida
 Route::get('/swaidaPage', [SwaidaController::class, 'index']);
@@ -37,3 +38,14 @@ Route::get('/marketingMonthlyContractsEdit/{id}', [MarketingMonthlyContractsCont
 Route::post('/marketingMonthlyContractsEdit/{id}', [MarketingMonthlyContractsController::class, 'editItem']);
 Route::post('/marketingMonthlyContractsBulkDelete', [MarketingMonthlyContractsController::class, 'bulkDelete']);
 Route::get('/marketingMonthlyContracts/downloadcsv', [MarketingMonthlyContractsController::class, 'downloadCsv'])->name('marketingMonthlyContracts.downloadCsv');
+
+//Daily Sales
+Route::get('/dailySalesPage', [DailySalesController::class, 'index']);
+Route::match(['get', 'post'], '/dailySalesFilter', [DailySalesController::class, 'filter']);
+Route::get('/dailySalesAdd', [DailySalesController::class, 'showAddForm']);
+Route::post('/dailySalesAdd', [DailySalesController::class, 'addItem']);
+Route::get('/dailySalesDelete/{id}', [DailySalesController::class, 'deleteItem']);
+Route::get('/dailySalesEdit/{id}', [DailySalesController::class, 'showEditForm']);
+Route::post('/dailySalesEdit/{id}', [DailySalesController::class, 'editItem']);
+Route::post('/dailySalesBulkDelete', [DailySalesController::class, 'bulkDelete']);
+Route::get('/dailySales/downloadcsv', [DailySalesController::class, 'downloadCsv'])->name('dailySales.downloadCsv');
