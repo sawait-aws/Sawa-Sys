@@ -16,6 +16,11 @@
 
 <div class="table-container">
     <h2>Daily Sales Data</h2>
+    @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
     <form method="POST" action="{{ url('/dailySalesFilter') }}" class="filter-form" id="dailySalesForm">
         @csrf
         <div class="form-group">
@@ -70,11 +75,6 @@
         <a href="{{ url('/dailySales/downloadcsv') }}?{{ http_build_query(request()->all()) }}" class="btn btn-download">Download CSV</a>
     </div>
     </form>
-    @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
     <!-- Bulk delete form -->
     <form method="POST" action="{{ url('/dailySalesBulkDelete') }}" id="bulkDeleteForm">
         @csrf

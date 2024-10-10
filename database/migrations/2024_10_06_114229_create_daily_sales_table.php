@@ -30,7 +30,7 @@ class CreateDailySalesTable extends Migration
             $table->decimal('delivery_cost_syp', 20, 2)->nullable();
             $table->string('delivery_area')->nullable();
             $table->string('category')->nullable();
-            $table->integer('item_quantity')->nullable();
+            $table->string('item_quantity')->nullable();
             $table->decimal('rate', 5, 2)->nullable();
             $table->string('client_request_method')->nullable();
             $table->integer('commission_quantity')->nullable();

@@ -83,6 +83,7 @@
         <input type="text" name="category" placeholder="Category" required>
 
         <select name="item_quantity" required>
+            <option value="">Select Item Quantity</option>
             <option value="Single">Single</option>
             <option value="Multi">Multi</option>
         </select>
@@ -90,6 +91,7 @@
         <input type="number" step="0.01" name="rate" placeholder="Rate" required>
 
         <select name="client_request_method" required>
+            <option value="">Select Client Request Method</option>
             <option value="CS">CS</option>
             <option value="App">App</option>
         </select>
@@ -98,6 +100,7 @@
         <input type="number" step="0.01" name="delivery_quantity" placeholder="Delivery Quantity" required>
 
         <select name="best_seller" required>
+            <option value="">Is it Best Seller?</option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
         </select>
@@ -105,6 +108,7 @@
         <input type="text" name="product" placeholder="Product" required>
 
         <select name="client_type" required>
+            <option value="">Select Client Type</option>
             <option value="Old">Old</option>
             <option value="New">New</option>
         </select>
@@ -113,6 +117,7 @@
         <input type="text" name="employee_name" placeholder="Employee Name" required>
 
         <select name="pre_order" id="pre_order" required>
+            <option value="">Select Pre-order Status</option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
         </select>

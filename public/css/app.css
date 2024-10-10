@@ -372,3 +372,7 @@ table th {
 .alert-fade-out {
     opacity: 0; /* Fully transparent */
 }
+
+a {
+    text-decoration: none;
+}

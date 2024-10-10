@@ -109,9 +109,7 @@
             <option value="No" {{ $item->pre_order == 'No' ? 'selected' : '' }}>No</option>
         </select>
 
-        @if ($item->pre_order == 'Yes')
-            <input type="datetime-local" name="delivery_date" value="{{ $item->delivery_date }}" placeholder="Delivery Date" required>
-        @endif
+        <input type="datetime-local" name="delivery_date" value="{{ $item->delivery_date }}" placeholder="Delivery Date" required>
 
         <input type="text" name="client_phone" value="{{ $item->client_phone }}" placeholder="Client's Phone Number" required>
         <input type="text" name="notes" value="{{ $item->notes }}" placeholder="Notes" >
