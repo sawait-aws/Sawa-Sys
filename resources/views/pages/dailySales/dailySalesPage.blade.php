@@ -101,6 +101,7 @@
                     <th>Delivery Cost in SYP</th>
                     <th>Commission Quantity</th>
                     <th>Delivery Quantity</th>
+                    <th>Best Seller?</th>
                     <th>Product</th>
                     <th>Client Type</th>
                     <th>Discovery Method</th>
@@ -135,11 +136,12 @@
                     <td>{{ $item->delivery_cost_syp }}</td>
                     <td>{{ $item->commission_quantity }}</td>
                     <td>{{ $item->delivery_quantity }}</td>
+                    <td>{{ $item->best_seller ? 'Yes' : 'No' }}</td>
                     <td>{{ $item->product }}</td>
                     <td>{{ $item->client_type }}</td>
                     <td>{{ $item->discovery_method }}</td>
                     <td>{{ $item->employee_name }}</td>
-                    <td>{{ $item->pre_order }}</td>
+                    <td>{{ $item->pre_order ? 'Yes' : 'No' }}</td>
                     <td>{{ $item->delivery_date }}</td>
                     <td>{{ $item->client_phone }}</td>
                     <td>{{ $item->notes }}</td>

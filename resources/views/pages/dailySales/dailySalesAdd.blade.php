@@ -101,8 +101,8 @@
 
         <select name="best_seller" required>
             <option value="">Is it Best Seller?</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
         </select>
 
         <input type="text" name="product" placeholder="Product" required>
@@ -118,8 +118,8 @@
 
         <select name="pre_order" id="pre_order" required>
             <option value="">Select Pre-order Status</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
         </select>
 
         <input type="datetime-local" name="delivery_date" id="delivery_date" placeholder="Delivery Date (if Pre Order)" required>

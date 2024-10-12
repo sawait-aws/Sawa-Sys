@@ -90,8 +90,8 @@
         <input type="number" step="0.01" name="delivery_quantity" value="{{ $item->delivery_quantity }}" placeholder="Delivery Quantity" required>
 
         <select name="best_seller" required>
-            <option value="Yes" {{ $item->best_seller == 'Yes' ? 'selected' : '' }}>Yes</option>
-            <option value="No" {{ $item->best_seller == 'No' ? 'selected' : '' }}>No</option>
+            <option value="1" {{ $item->best_seller == '1' ? 'selected' : '' }}>Yes</option>
+            <option value="0" {{ $item->best_seller == '0' ? 'selected' : '' }}>No</option>
         </select>
 
         <input type="text" name="product" value="{{ $item->product }}" placeholder="Product" required>
@@ -105,8 +105,8 @@
         <input type="text" name="employee_name" value="{{ $item->employee_name }}" placeholder="Employee's Name" required>
 
         <select name="pre_order" id="pre_order" required>
-            <option value="Yes" {{ $item->pre_order == 'Yes' ? 'selected' : '' }}>Yes</option>
-            <option value="No" {{ $item->pre_order == 'No' ? 'selected' : '' }}>No</option>
+            <option value="1" {{ $item->pre_order == '1' ? 'selected' : '' }}>Yes</option>
+            <option value="0" {{ $item->pre_order == '0' ? 'selected' : '' }}>No</option>
         </select>
 
         <input type="datetime-local" name="delivery_date" value="{{ $item->delivery_date }}" placeholder="Delivery Date" required>
