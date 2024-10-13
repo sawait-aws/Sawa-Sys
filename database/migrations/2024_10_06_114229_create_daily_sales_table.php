@@ -31,7 +31,7 @@ class CreateDailySalesTable extends Migration
             $table->string('delivery_area')->nullable();
             $table->string('category')->nullable();
             $table->string('item_quantity')->nullable();
-            $table->decimal('rate', 5, 2)->nullable();
+            $table->decimal('rate', 20, 2)->nullable();
             $table->string('client_request_method')->nullable();
             $table->integer('commission_quantity')->nullable();
             $table->integer('delivery_quantity')->nullable();
@@ -41,7 +41,7 @@ class CreateDailySalesTable extends Migration
             $table->string('discovery_method')->nullable();
             $table->string('employee_name')->nullable();
             $table->boolean('pre_order')->default(false);
-            $table->date('delivery_date')->nullable();
+            $table->datetime('delivery_date')->nullable();
             $table->string('client_phone')->nullable();
             $table->text('notes')->nullable();
             $table->timestamps();

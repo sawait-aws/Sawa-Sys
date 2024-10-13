@@ -109,7 +109,7 @@
             <option value="0" {{ $item->pre_order == '0' ? 'selected' : '' }}>No</option>
         </select>
 
-        <input type="datetime-local" name="delivery_date" value="{{ $item->delivery_date }}" placeholder="Delivery Date" required>
+        <input type="datetime-local" name="delivery_date" value="{{ $item->delivery_date }}" required>
 
         <input type="text" name="client_phone" value="{{ $item->client_phone }}" placeholder="Client's Phone Number" required>
         <input type="text" name="notes" value="{{ $item->notes }}" placeholder="Notes" >
